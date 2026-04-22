@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-anime-bg: #09090b;
+  --color-anime-dark: #12121a;
+  --color-anime-pink: #ff2d55;
+  --color-anime-purple: #af52de;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-anime-bg)] text-white font-sans antialiased overflow-hidden;
+    background: #09090b;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+.anime-card {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl;
+}
+
+.anime-button {
+  @apply bg-gradient-to-r from-[var(--color-anime-pink)] to-[var(--color-anime-purple)] px-6 py-4 rounded-xl font-bold text-white shadow-lg shadow-pink-500/20 active:scale-[0.98] transition-all hover:brightness-110 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.anime-input {
+  @apply bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-[var(--color-anime-pink)] transition-all placeholder:text-white/20;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  h1 { @apply text-5xl leading-tight; }
+  .p-6 { @apply p-4; }
+}

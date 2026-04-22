@@ -1,0 +1,10 @@
+{
+  "name": "Ani Xf Dub",
+  "description": "A high-performance standalone AI Chat assistant for anime enthusiasts, powered by Llama 3.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "AI Chat"
+  ]
+}
